@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NanoNova Terminal</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="background-grid"></div>
+<div class="scanlines"></div>
+
+<!-- HEADER -->
+<header class="gov-header">
+
+    <div class="gov-brand">
+        <img src="assets/robotics-seal.png" class="gov-seal" alt="NanoNova Robotics Club seal">
+        <div>
+            <div class="gov-title">NANONOVA ROBOTICS CLUB</div>
+            <div class="gov-subtitle">Unified Information Network</div>
+        </div>
+    </div>
+
+    <button type="button" class="menu-toggle" onclick="toggleMenu()"
+            aria-label="Toggle navigation" aria-controls="govNav" aria-expanded="false">☰</button>
+
+    <nav class="gov-nav" id="govNav">
+        <a href="#" class="active" aria-current="page">
+            HOME
+            <span>MAIN-TERMINAL</span>
+        </a>
+        <a href="Registration.html">
+            REGISTRATION
+            <span>RI-001</span>
+        </a>
+    </nav>
+
+</header>
+
+<!-- TERMINAL -->
+<main class="monitor">
+
+    <div class="monitor-bar">
+        <span>MAIN-TERMINAL // PROGRAMMING DEPARTMENT</span>
+        <span class="status">● ONLINE</span>
+    </div>
+
+    <div class="screen">
+
+        <!-- BOOT -->
+        <div class="boot-text">
+            <p>NANONOVA UNIFIED OPERATING SYSTEM</p>
+            <p>NANONOVA INFORMATION NETWORK INITIALIZED</p>
+            <p>PROGRAMMING DEPARTMENT</p>
+            <p>SERGIO VERSION 001</p>
+        </div>
+
+        <!-- TABS -->
+        <div class="tabs" role="tablist">
+            <button type="button" class="tab active" onclick="openTab('overview', this)">[ OVERVIEW ]</button>
+            <button type="button" class="tab" onclick="openTab('Departments', this)">[ DEPARTMENTS ]</button>
+            <button type="button" class="tab" onclick="openTab('ArticleII', this)">[ PURPOSE, MISSION &amp; GOALS ]</button>
+            <button type="button" class="tab" onclick="openTab('website', this)">[ WEBSITE DEVELOPMENT LOGS ]</button>
+        </div>
+
+        <!-- GRID -->
+        <div class="terminal-grid">
+
+            <!-- LEFT -->
+            <aside class="left-panel">
+
+                <!-- OVERVIEW -->
+                <div class="menu-page active-page" id="overview">
+                    <button type="button" class="menu-item" onclick="showLog(homeData)">&gt; Club Overview</button>
+                    <button type="button" class="menu-item" onclick="showLog(preambleData)">&gt; Preamble</button>
+                </div>
+
+                <!-- DEPARTMENTS -->
+                <div class="menu-page" id="Departments">
+                    <button type="button" class="menu-item" onclick="showLog(RBoverview)">&gt; Robotics Department</button>
+                    <button type="button" class="menu-item" onclick="showLog(PDoverview)">&gt; Programming Department</button>
+                    <button type="button" class="menu-item" onclick="showLog(GDoverview)">&gt; Graphics Department</button>
+                    <button type="button" class="menu-item" onclick="showLog(MDoverview)">&gt; Media Department</button>
+                </div>
+
+                <!-- PURPOSE / MISSION / GOALS -->
+                <div class="menu-page" id="ArticleII">
+                    <button type="button" class="menu-item" onclick="showLog(SectionA)">&gt; Club Purpose and Mission</button>
+                    <button type="button" class="menu-item" onclick="showLog(SectionB)">&gt; Club Goals</button>
+                    <button type="button" class="menu-item" onclick="showLog(SectionC)">&gt; Vision</button>
+                </div>
+
+                <!-- WEBSITE LOGS -->
+                <div class="menu-page" id="website">
+                    <button type="button" class="menu-item" onclick="showLog(LOGS1)">&gt; Development Log 001</button>
+                    <button type="button" class="menu-item" onclick="showLog(LOGS2)">&gt; Development Log 002</button>
+                    <button type="button" class="menu-item" onclick="showLog(LOGS3)">&gt; Development Log 003</button>
+                    <button type="button" class="menu-item" onclick="showLog(LOGS4)">&gt; Development Log 004</button>
+                </div>
+
+            </aside>
+
+            <!-- RIGHT -->
+            <section class="right-panel" aria-live="polite">
+
+                <div id="logOutput" class="log-output">
+
+<div class="data-title">NANONOVA TERMINAL READY</div>
+
+Select a directory on the left to access files.
+
+<div class="data-grid">
+    <div class="data-card">
+        <h3>STATUS</h3>
+        <p class="highlight">ONLINE</p>
+    </div>
+    <div class="data-card">
+        <h3>INFORMATION DATA</h3>
+        <p class="highlight">AVAILABLE</p>
+    </div>
+</div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+</main>
+
+<script>
+function toggleMenu(){
+    const nav = document.getElementById("govNav");
+    const open = nav.classList.toggle("show");
+    document.querySelector(".menu-toggle").setAttribute("aria-expanded", open);
+}
+</script>
+<script src="script2.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Recruitment Portal</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="gov-header">
+  <div class="gov-left">
+    <img src="assets/robotics-seal.png" alt="Club Seal" class="gov-seal">
+  </div>
+
+  <div class="gov-center">
+    <div class="gov-title">
+      NANONOVA ROBOTICS CLUB
+    </div>
+    <div class="gov-subtitle">
+      RECRUITMENT INTERFACE
+    </div>
+  </div>
+<div class="menu-toggle" onclick="toggleMenu()">
+
+    ☰
+
+</div>
+<nav class="gov-nav" id="govNav">
+
+
+    <a href="Index.html">
+    HOME
+    <span>MAIN-TERMINAL</span>
+  </a>
+
+  <a href="#" class="active">
+    REGISTRATION
+    <span>RI-001</span>
+  </a>
+
+</div>
+</div>
+<div class="background-grid"></div>
+<div class="scanlines"></div>
+
+<div class="container">
+
+  <div class="terminal">
+
+    <div class="terminal-header">
+
+      <div class="terminal-title">
+        RECRUITMENT INTAKE TERMINAL
+      </div>
+
+      <div class="status">
+        STATUS: OPEN
+      </div>
+
+    </div>
+
+    <div class="content">
+
+      <div class="hero">
+
+        <h1 class="typing">
+          APPLICANT REGISTRATION PORTAL
+        </h1>
+
+        <p>
+          Welcome to the official recruitment intake system.
+          Complete the form truthfully.
+        </p>
+
+      </div>
+
+      <div class="warning-box">
+        > False information may result in denial.
+      </div>
+
+<form id="recruitment-form">
+
+  <div class="field">
+    <label>SURNAME</label>
+    <input type="text" name="surname" required>
+  </div>
+
+  <div class="field">
+    <label>FIRST NAME</label>
+    <input type="text" name="firstname" required>
+  </div>
+
+  <div class="field">
+    <label>MIDDLE NAME</label>
+    <input type="text" name="middlename">
+  </div>
+
+  <div class="field">
+    <label>GRADE LEVEL</label>
+    <input type="text" name="gradelevel" required>
+  </div>
+
+  <div class="field">
+    <label>GMAIL ADDRESS</label>
+    <input type="email" name="email" required>
+  </div>
+
+  <div class="field">
+    <label>HOME ADDRESS</label>
+    <textarea name="address" required></textarea>
+  </div>
+
+  <div class="field">
+    <label>AGE</label>
+    <input type="number" name="age" required>
+  </div>
+
+  <div class="field">
+    <label>SEX</label>
+
+    <select name="sex" required>
+      <option value="">SELECT SEX</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Prefer not to say">Prefer not to say</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label>DEPARTMENT OF CHOICE</label>
+
+    <select name="department" required>
+      <option value="">SELECT DEPARTMENT</option>
+
+      <option value="Graphics">
+        Graphics
+      </option>
+
+      <option value="Robotics">
+        Robotics
+      </option>
+
+      <option value="Programming">
+        Programming
+      </option>
+
+      <option value="Media">
+        Media
+      </option>
+
+    </select>
+  </div>
+
+  <div class="field">
+    <label>LRN</label>
+    <input type="text" name="lrn" required>
+  </div>
+
+  <button class="submit-btn" type="submit">
+    SUBMIT APPLICATION
+  </button>
+
+</form>
+
+      <div class="footer">
+        Recruitment System v1.0
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+<script>
+
+function toggleMenu(){
+
+    document
+    .getElementById("govNav")
+    .classList.toggle("show");
+
+}
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
